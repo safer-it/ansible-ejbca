@@ -3,7 +3,7 @@
 # On ansible machine run: pip install pywinrm
 - name: Manage Hyper-V
   hosts:
-    - localhost
+    - pki
   tasks:
     - name: Create test.example.com VM
       win_hyperv_guest:
