@@ -1,2 +1,2 @@
-# ansible-ejbca
-ansible ejbca deploy on debian
+# eecs-lab
+ansible eecs lab deploy on debian
