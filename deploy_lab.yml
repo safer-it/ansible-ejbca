@@ -5,7 +5,7 @@
   hosts: pki
   become: true
   gather_facts: yes
-  tasks:
-    package:
-      name: "default-jdk-headless"
-      state: present
+  package:
+    name: "default-jdk-headless"
+    state: present
+
