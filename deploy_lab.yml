@@ -1,14 +1,10 @@
 ---
 # On target machine run: https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 # On ansible machine run: pip install pywinrm
-- name: Manage Hyper-V
+- name: deploy pki
   hosts:
     - pki
   tasks:
-    - name: Create test.example.com VM
-      win_hyperv_guest:
-        name: test.example.com
-        generation: 1
-        memory: 256MB
-        network_switch: ADM1
+    - package:
+        name: "default-jdk-headless"
         state: present
