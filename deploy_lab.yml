@@ -6,6 +6,6 @@
   become: true
   gather_facts: yes
   tasks:
-    - package:
+    package:
       name: "default-jdk-headless"
       state: present
