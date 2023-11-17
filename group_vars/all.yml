@@ -2,7 +2,6 @@
 
 #ansible common variables
 ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-remote_user: fanch
 ansible_ssh_user: fanch 
 ansible_ssh_pass: Achanger1*
 ansible_password: Achanger1*
