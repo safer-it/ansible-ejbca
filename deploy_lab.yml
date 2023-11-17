@@ -2,8 +2,8 @@
 # On target machine run: https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
 # On ansible machine run: pip install pywinrm
 - name: deploy pki
-  hosts:
-    - pki
+  hosts: pki
+  become: true
   tasks:
     - package:
         name: "default-jdk-headless"
