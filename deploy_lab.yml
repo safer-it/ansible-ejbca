@@ -4,7 +4,8 @@
 - name: deploy pki
   hosts: pki
   become: true
+  gather_facts: yes
   tasks:
     - package:
-        name: "default-jdk-headless"
-        state: present
+      name: "default-jdk-headless"
+      state: present
