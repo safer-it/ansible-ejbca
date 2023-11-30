@@ -1,0 +1,15 @@
+---
+# On target machine run: https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+# On ansible machine run: pip install pywinrm
+- name: powerup lab servers
+  hosts: localhost
+  tasks:
+    - name: start
+      community.general.ipmi_power:
+        name: "{{ item }}"
+        user: ADMIN
+        password: Eecs1*Eecs1*
+        state: 'on'
+      with_items: "{{ groups['physicalservers'] }}" 
+
+

@@ -1,0 +1,8 @@
+---
+# tasks file for power-lab
+- name: Ensure machine is powered on
+  community.general.ipmi_power:
+    name: {{ipmi_srv}}
+    user: ADMIN
+    password: Eecs1*Eecs1*
+    state: 'on'
